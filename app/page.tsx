@@ -1,9 +1,10 @@
-import { SidebarInset, SidebarTrigger } from "./components/ui/sidebar";
+import { SidebarInset } from "./components/ui/sidebar";
+import { SidebarToggleMobile } from "./components/ui/sidebar-toggle-mobile";
 
 export default function Home() {
   return (
     <SidebarInset className="p-4">
-      <h1>Home</h1>
+      <SidebarToggleMobile/>
     </SidebarInset>
   );
 }

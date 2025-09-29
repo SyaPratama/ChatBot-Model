@@ -1,4 +1,5 @@
 "use client";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Icon } from "../ui/icon";
 import {
   Sidebar,
@@ -13,12 +14,14 @@ import { NavFooter } from "./nav-footer";
 import { NavMain } from "./nav-main";
 
 export function MainSidebar() {
+  const isMobile = useIsMobile();
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="inline">
         <div className="w-full inline-flex p-2 justify-between group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:p-0">
           <Icon className="w-6 inline-flex group-data-[collapsible=icon]:hidden" />
-          <SidebarTrigger className="inline-flex" />
+          {!isMobile ? <SidebarTrigger className="inline-flex" /> : null}
         </div>
       </SidebarHeader>
       <SidebarContent>

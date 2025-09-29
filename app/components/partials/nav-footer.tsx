@@ -7,7 +7,7 @@ export function NavFooter() {
         <Image
           src="/images/default.jpg"
           alt="Default Image"
-          className="object-cover rounded-full group-data-[collapsible=icon]:w-6 group-data-[collapsible=icon]:h-6"
+          className="object-cover rounded-full group-data-[collapsible=icon]:w-6.5 group-data-[collapsible=icon]:h-6.5"
           width={40}
           height={40}
         />
