@@ -3,10 +3,13 @@ import { Icon } from "../ui/icon";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarHeader,
+  SidebarSeparator,
   SidebarTrigger,
 } from "../ui/sidebar";
 import { NavChats } from "./nav-chats";
+import { NavFooter } from "./nav-footer";
 import { NavMain } from "./nav-main";
 
 export function MainSidebar() {
@@ -20,8 +23,12 @@ export function MainSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <NavMain />
-        <NavChats/>
+        <NavChats />
       </SidebarContent>
+      <SidebarFooter className="w-full p-0">
+        <SidebarSeparator className="w-full m-0 group-data-[collapsible=icon]:hidden" />
+        <NavFooter />
+      </SidebarFooter>
     </Sidebar>
   );
 }

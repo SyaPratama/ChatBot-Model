@@ -26,7 +26,7 @@ export function NavChats() {
       <SidebarMenu>
         {nav.map((item) => (
           <SidebarMenuItem key={item.id} className="group-data-[collapsible=icon]:hidden my-0.5">
-            <SidebarMenuButton>
+            <SidebarMenuButton className="cursor-pointer">
               <span>{item.title}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
