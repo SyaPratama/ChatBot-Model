@@ -1,5 +1,5 @@
 "use client";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "../../hooks/use-mobile";
 import { Icon } from "../ui/icon";
 import {
   Sidebar,
