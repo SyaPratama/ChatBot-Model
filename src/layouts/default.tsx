@@ -1,14 +1,14 @@
-import { PropsWithChildren } from "react";
-import { ThemeProvider } from "next-themes";
-import { DefaultSeo } from "next-seo";
 import { MainSidebar } from "@/components/partials/main-sidebar";
-import { SidebarInset } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { PropsWithChildren } from "react";
 
 export function DefaultLayout({ children }: PropsWithChildren) {
   return (
     <>
-      <MainSidebar/>
-      <SidebarInset className="px-4 py-3">{children}</SidebarInset>
+      <SidebarProvider>
+        <MainSidebar />
+        <SidebarInset>{children}</SidebarInset>
+      </SidebarProvider>
     </>
   );
 }

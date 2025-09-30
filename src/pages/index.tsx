@@ -1,9 +1,11 @@
-import { SidebarTrigger } from "../components/ui/sidebar";
+import { useState } from "react";
 
 export default function Page() {
+  const [prompt, setPrompt] = useState("");
+
   return (
     <>
-      <h1>Home</h1>
+      <input value={prompt} className="bg-red-50" onChange={(e) => setPrompt(e.target.value)} />
     </>
   );
 }
