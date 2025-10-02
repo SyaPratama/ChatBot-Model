@@ -1,0 +1,15 @@
+body{
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+        display: none;
+        width: 0;
+    }
+}
+
+.conversation{
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+        display: none;
+        width: 0;
+    }
+}
