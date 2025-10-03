@@ -1,7 +1,11 @@
 import OpenAI from "openai"
 import process from "process";
 
-export async function POST(req: Request){
+interface RequestResponse {
+    
+}
+
+export async function POST(req: RequestResponse){
     const openai = new OpenAI({
         baseURL: "https://openrouter.ai/api/v1",
         apiKey: process.env.OPENROUTER_API_KEY
