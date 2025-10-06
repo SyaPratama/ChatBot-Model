@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   PromptInput,
   PromptInputActionAddAttachments,
@@ -19,6 +19,7 @@ import { Conversation, ConversationContent } from "../ai-elements/conversation";
 import { Message, MessageContent } from "../ai-elements/message";
 import { cn } from "@/lib/utils";
 import { useSidebar } from "../ui/sidebar";
+import { MessageCHAT } from "@/api/chat/conversation";
 
 export function Chat() {
   const [text, setText] = useState<string>("");
@@ -32,216 +33,11 @@ export function Chat() {
             <Message from="user">
               <MessageContent>Hi!</MessageContent>
             </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
-            <Message from="user">
-              <MessageContent>Hi!</MessageContent>
-            </Message>
-            <Message from="assistant">
-              <MessageContent variant="flat">
-                Hello! How can I help you today?
-              </MessageContent>
-            </Message>
           </ConversationContent>
         </Conversation>
         <PromptInput
-          onSubmit={() => {}}
-          className={cn("mt-4 fixed bottom-6 max-w-85 min-lg:max-w-[60rem]", !isMobile && !open ? "min-lg:max-w-[70rem]" : "" )}
+          onSubmit={async () => { }}
+          className={cn("mt-4 fixed bottom-6 max-w-90 min-md:max-w-[35rem] min-lg:max-w-[60rem] min-2xl:max-w-[70rem]", !isMobile && !open ? "min-lg:max-w-[70rem] min-2xl:max-w-[80rem]" : "" )}
           globalDrop
           multiple
         >
