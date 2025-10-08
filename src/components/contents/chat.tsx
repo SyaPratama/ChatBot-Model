@@ -19,11 +19,14 @@ import { Conversation, ConversationContent } from "../ai-elements/conversation";
 import { Message, MessageContent } from "../ai-elements/message";
 import { cn } from "@/lib/utils";
 import { useSidebar } from "../ui/sidebar";
-import { MessageCHAT } from "@/api/chat/conversation";
 
 export function Chat() {
   const [text, setText] = useState<string>("");
   const { isMobile, open } = useSidebar()
+
+  const handleSubmit = async () => {
+
+  }
 
   return (
     <div className="max-w-full overflow-hidden mx-auto p-6 relative size-full h-full">
@@ -36,7 +39,7 @@ export function Chat() {
           </ConversationContent>
         </Conversation>
         <PromptInput
-          onSubmit={async () => { }}
+          onSubmit={handleSubmit}
           className={cn("mt-4 fixed bottom-6 max-w-90 min-md:max-w-[35rem] min-lg:max-w-[60rem] min-2xl:max-w-[70rem]", !isMobile && !open ? "min-lg:max-w-[70rem] min-2xl:max-w-[80rem]" : "" )}
           globalDrop
           multiple
