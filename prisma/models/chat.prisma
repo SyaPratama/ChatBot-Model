@@ -1,0 +1,11 @@
+model Chat {
+    id String @id @default(cuid())
+    session Session @relation(fields: [sessionId], references: [id])
+    sessionId String
+    title String
+    content String
+    parent_id Int
+    mediaPath String[]
+    createdAt DateTime @default(now()) @map("created_at")
+    updatedAt DateTime @updatedAt @map("updated_at")
+}
